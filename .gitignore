@@ -1,2 +1,8 @@
 # deps
 node_modules/
+
+# Drizzle ORM generated types
+drizzle/
+
+# env files
+.env
