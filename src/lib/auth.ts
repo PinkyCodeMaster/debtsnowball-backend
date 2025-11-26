@@ -26,11 +26,11 @@ export const auth = betterAuth({
         expiresIn: 60 * 60 * 24 * 7,
         updateAge: 60 * 60 * 24,
     },
-    async onSignUp(user: any) {
-        console.log('New user signed up:', user.email);
-        await sendWelcomeEmail(user.email, user.name || 'there');
-    },
+    // async onSignUp(user: any) {
+    //     console.log('New user signed up:', user.email);
+    //     await sendWelcomeEmail(user.email, user.name || 'there');
+    // },
     plugins: [
-        openAPI()
+        openAPI({theme: "deepSpace", title: "Auth API", version: "1.0.0", baseServerURL: 'https://debtsnowball-backend.vercel.app' })
     ],
 });
