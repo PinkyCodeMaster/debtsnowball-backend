@@ -1,25 +1,19 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
+    "jsx": "react-jsx",                
+    "jsxImportSource": "react",       
+    "strict": true,
+    "paths": { "@/*": ["./src/*"] },
+    "types": ["node"],
     "outDir": "dist",
-    "types": [
-      "node"
-    ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "tsc-alias": {
-    "resolveFullPaths": false
-  }
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
