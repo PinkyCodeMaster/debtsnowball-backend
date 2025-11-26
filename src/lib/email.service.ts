@@ -1,11 +1,14 @@
 import { render } from '@react-email/components';
-import { resend, EMAIL_FROM, APP_NAME, APP_URL } from './email';
+import { resend, EMAIL_FROM, APP_NAME } from './email';
 import { WelcomeEmail } from '../emails/WelcomeEmail';
 import { VerificationEmail } from '../emails/VerificationEmail';
 import { PasswordResetEmail } from '../emails/PasswordResetEmail';
 import { PaymentReminderEmail } from '../emails/PaymentReminderEmail';
 import { DebtPaidOffEmail } from '../emails/DebtPaidOffEmail';
 import { WeeklySummaryEmail } from '../emails/WeeklySummaryEmail';
+import env from '../env';
+
+const APP_URL = env.HONO_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:3000';
 
 export async function sendWelcomeEmail(to: string, userName: string) {
   try {

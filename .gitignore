@@ -15,9 +15,6 @@ node_modules/
 .env
 .env.production
 
-# Drizzle ORM generated types
-drizzle/
-
 # logs
 logs/
 *.log
@@ -27,8 +24,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# misc
-.DS_Store
-
 # build
 dist/
+build/
+.out/
+
+# misc
+.DS_Store

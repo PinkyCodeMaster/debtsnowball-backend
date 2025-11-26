@@ -2,10 +2,8 @@ import { sendVerificationEmail, sendPasswordResetEmail, sendWelcomeEmail } from 
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { openAPI } from 'better-auth/plugins';
 import { betterAuth } from "better-auth";
-import * as schema from "@/db/schema";
-import { db } from "@/db";
-
-const APP_URL = process.env.EXPO_PUBLIC_API_URL?.replace('/api', '') || 'http://localhost:3000';
+import * as schema from "../db/schema";
+import { db } from "../db";
 
 export const auth = betterAuth({
     database: drizzleAdapter(db, {
