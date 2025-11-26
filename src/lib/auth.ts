@@ -31,6 +31,6 @@ export const auth = betterAuth({
     //     await sendWelcomeEmail(user.email, user.name || 'there');
     // },
     plugins: [
-        openAPI({theme: "deepSpace", title: "Auth API", version: "1.0.0", baseServerURL: 'https://debtsnowball-backend.vercel.app' })
+        openAPI({theme: "deepSpace", })
     ],
 });
