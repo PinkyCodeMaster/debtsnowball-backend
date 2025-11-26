@@ -1,7 +1,7 @@
 {
     "functions": {
         "*": {
-            "runtime": "bun@latest"
+            "runtime": "bun@1.3.3"
         }
     }
 }
