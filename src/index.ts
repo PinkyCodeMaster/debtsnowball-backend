@@ -1,3 +1,4 @@
+import 'tsconfig-paths/register';
 import { serve } from '@hono/node-server'
 import { auth } from '@/lib/auth'
 import { Hono } from 'hono'
