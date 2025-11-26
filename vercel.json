@@ -1,7 +1,0 @@
-{
-    "functions": {
-        "*": {
-            "runtime": "bun@1.3.3"
-        }
-    }
-}
