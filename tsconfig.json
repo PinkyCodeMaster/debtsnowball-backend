@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
@@ -10,14 +7,10 @@
         "./src/*"
       ]
     },
+    "outDir": "dist",
     "types": [
       "node"
     ],
-    "strict": true,
-    "outDir": "dist",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },
   "include": [
