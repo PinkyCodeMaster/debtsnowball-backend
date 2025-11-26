@@ -1,4 +1,5 @@
 import { serve } from '@hono/node-server'
+import { auth } from '@/lib/auth'
 import { Hono } from 'hono'
 
 const app = new Hono()
@@ -6,6 +7,8 @@ const app = new Hono()
 app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
+
+app.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw));
 
 serve({
   fetch: app.fetch,
